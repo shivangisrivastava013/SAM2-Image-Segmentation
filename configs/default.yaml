@@ -1,0 +1,21 @@
+sam2:
+  model_cfg: "sam2_hiera_s.yaml"
+  checkpoint_path: "checkpoints/sam2_hiera_small.pt"
+  device: "cuda"
+
+yolo:
+  model_name: "yolov8n.pt"
+  confidence_threshold: 0.50
+  safety_classes:
+    - person
+    - car
+    - bicycle
+    - bus
+    - truck
+    - dog
+    - chair
+    - bottle
+
+evaluation:
+  benchmark_dir: "examples/input"
+  output_dir: "results"

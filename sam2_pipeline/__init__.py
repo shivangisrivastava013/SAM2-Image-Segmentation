@@ -1,10 +1,21 @@
-"""
-SAM2 Image Segmentation Pipeline using Meta Segment Anything Model 2
-Author: Shivangi Srivastava (MS in AI @ NJIT)
-"""
+from .config import SAM2Config
+from .evaluation import compute_boundary_f1, compute_dice, compute_iou, run_benchmark_eval
+from .pipeline import YOLOGuidedSAM2Pipeline
+from .sam2_engine import SAM2SegmentationEngine
+from .schemas import DetectionResult, SegmentationResult
+from .visualization import render_segmentation_overlay
+from .yolo_detector import YOLODetector
 
-__version__ = "1.0.0"
-__author__ = "Shivangi Srivastava"
-
-from .model import SAM2SegmentationEngine
-from .eval import compute_iou, compute_dice
+__all__ = [
+    "DetectionResult",
+    "SegmentationResult",
+    "SAM2Config",
+    "SAM2SegmentationEngine",
+    "YOLODetector",
+    "YOLOGuidedSAM2Pipeline",
+    "compute_iou",
+    "compute_dice",
+    "compute_boundary_f1",
+    "run_benchmark_eval",
+    "render_segmentation_overlay",
+]
