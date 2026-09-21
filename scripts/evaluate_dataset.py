@@ -23,8 +23,9 @@ def main():
         mock_mode=args.mock_mode,
     )
 
+    title = "MOCK-MODE PIPELINE VALIDATION" if args.mock_mode else "REAL SAM2 CHECKPOINT BENCHMARK"
     print("\n========================================================")
-    print("   SAM2 IMAGE SEGMENTATION - EMPIRICAL BENCHMARK")
+    print(f"   SAM2 IMAGE SEGMENTATION - {title}")
     print("========================================================")
     print(f"Execution Source: {results['execution_source']}\n")
 
