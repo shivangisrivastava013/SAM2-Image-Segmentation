@@ -1,6 +1,6 @@
 # SAM 2 Visual Segmentation Output & Artifacts
 
-This directory contains committed segmentation mask visualizations and benchmark output artifacts produced by the Meta SAM 2 zero-shot segmentation pipeline.
+This directory contains deterministic mock-mode segmentation visualizations used to validate prompting, evaluation, and rendering behavior.
 
 > [!NOTE]
 > These visualizations and metrics were generated in deterministic mock mode to validate the pipeline, evaluation code, and rendering workflow. They do not represent inference results from trained SAM2 weights.
@@ -13,7 +13,7 @@ This directory contains committed segmentation mask visualizations and benchmark
 | **`box_prompt_result.png`** | Bounding Box | Mean IoU: `1.0000`, Dice: `1.0000` | Rectangular bounding box prompt isolating target object boundary |
 | **`yolo_guided_result.png`** | Automated YOLO Box | Mean IoU: `0.5977`, Dice: `0.7482` | Automated 2-stage pipeline: YOLO object detection → SAM 2 mask |
 
-## 📊 Benchmark Quantitative Performance
+## 📊 Mock-Mode Validation Results
 
 | Method | Mean IoU | Mean Dice | Boundary F1 | Latency (CPU Mock) |
 | :--- | :---: | :---: | :---: | :---: |
