@@ -2,6 +2,9 @@
 
 This directory contains committed segmentation mask visualizations and benchmark output artifacts produced by the Meta SAM 2 zero-shot segmentation pipeline.
 
+> [!NOTE]
+> These visualizations and metrics were generated in deterministic mock mode to validate the pipeline, evaluation code, and rendering workflow. They do not represent inference results from trained SAM2 weights.
+
 ## 🖼️ Segmentation Artifacts
 
 | Image Artifact | Prompt Mode | Primary Metrics | Description |
@@ -23,5 +26,5 @@ This directory contains committed segmentation mask visualizations and benchmark
 To re-run the benchmark suite and save output visualization images:
 
 ```bash
-python scripts/evaluate.py --save-vis --output-dir examples/output
+python scripts/evaluate_dataset.py --mock-mode
 ```
