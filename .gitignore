@@ -7,6 +7,8 @@ __pycache__/
 
 /results/*
 !/results/.gitkeep
+!/results/evaluation_results.json
+!/results/sam2_demo_result.png
 *.pth
 *.pt
 
