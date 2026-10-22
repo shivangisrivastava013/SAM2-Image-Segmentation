@@ -147,59 +147,6 @@ def run_benchmark_eval(
             "description": "Deterministic CPU pipeline validation for CI regression testing and contract verification",
             "benchmarks": mock_benchmarks,
         },
-        "real_sam2_benchmarks": {
-            "hardware": "NVIDIA A100-SXM4-80GB (CUDA 12.1)",
-            "evaluation_dataset": "SA-1B / Zero-Shot Instance Segmentation",
-            "models": {
-                "sam2_hiera_tiny": {
-                    "parameters": "38.9M",
-                    "checkpoint_size_mb": 148,
-                    "box_miou": 0.752,
-                    "mean_dice": 0.858,
-                    "latency_ms": 22.4,
-                    "fps": 44.6,
-                    "gpu_memory_vram_gb": 1.8,
-                },
-                "sam2_hiera_small": {
-                    "parameters": "46.0M",
-                    "checkpoint_size_mb": 175,
-                    "box_miou": 0.765,
-                    "mean_dice": 0.867,
-                    "latency_ms": 28.1,
-                    "fps": 35.6,
-                    "gpu_memory_vram_gb": 2.3,
-                },
-                "sam2_hiera_base_plus": {
-                    "parameters": "80.8M",
-                    "checkpoint_size_mb": 308,
-                    "box_miou": 0.778,
-                    "mean_dice": 0.875,
-                    "latency_ms": 38.7,
-                    "fps": 25.8,
-                    "gpu_memory_vram_gb": 3.8,
-                },
-                "sam2_hiera_large": {
-                    "parameters": "224.4M",
-                    "checkpoint_size_mb": 856,
-                    "box_miou": 0.791,
-                    "mean_dice": 0.883,
-                    "latency_ms": 52.3,
-                    "fps": 19.1,
-                    "gpu_memory_vram_gb": 6.2,
-                },
-            },
-            "pipeline_end_to_end": {
-                "yolo_guided_sam2_small": {
-                    "yolo_detector_latency_ms": 5.8,
-                    "sam2_mask_latency_ms": 28.1,
-                    "total_pipeline_latency_ms": 33.9,
-                    "pipeline_fps": 29.5,
-                    "box_miou": 0.765,
-                    "mean_dice": 0.867,
-                    "gpu_memory_vram_gb": 2.8,
-                }
-            },
-        },
     }
 
     out_json = os.path.join(output_dir, "evaluation_results.json")
